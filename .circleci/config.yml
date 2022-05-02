@@ -20,7 +20,7 @@ jobs:
       kafka-version:
         type: string
     docker:
-      - image: cimg/ruby:2.5
+      - image: cimg/ruby:2.7
         environment:
           LOG_LEVEL: DEBUG
       - image: wurstmeister/zookeeper
@@ -56,7 +56,7 @@ jobs:
       kafka-version:
         type: string
     docker:
-      - image: cimg/ruby:2.5
+      - image: cimg/ruby:2.7
         environment:
           LOG_LEVEL: DEBUG
       - image: bitnami/zookeeper
