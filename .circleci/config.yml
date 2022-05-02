@@ -99,6 +99,10 @@ workflows:
             parameters:
               ruby-version:
                 - "2.5"
+                - "2.6"
+                - "2.7"
+                - "3.0"
+                - "3.1"
       - functional-with-wurstmeister:
           name: functional-kafka-<< matrix.kafka-version >>
           matrix:
@@ -120,3 +124,6 @@ workflows:
             parameters:
               kafka-version:
                 - "2.7.0"
+                - "2.8"
+                - "3.0"
+                - "3.1"
