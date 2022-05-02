@@ -91,12 +91,13 @@ workflows:
   test:
     jobs:
       - unit:
+          name: unit-ruby-<< matrix.ruby-version >>
           matrix:
             parameters:
               ruby-version:
                 - "2.5"
       - functional-with-wurstmeister:
-          name: functional-<< matrix.kafka-version >>
+          name: functional-kafka-<< matrix.kafka-version >>
           matrix:
             parameters:
               kafka-version:
@@ -111,7 +112,7 @@ workflows:
                 - 2.12-2.5.0
                 - 2.13-2.6.0
       - functional-with-bitnami:
-          name: functional-<< matrix.kafka-version >>
+          name: functional-kafka-<< matrix.kafka-version >>
           matrix:
             parameters:
               kafka-version:
